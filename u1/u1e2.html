@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tema 3. Unidad 1. Trabajo avanzado con DOM</title>
+    <style>
+        /* Estilos básicos para diferenciar estados */
+        .archived { opacity: 0.6; filter: grayscale(1); }
+        .completed { border: 2px solid green; }
+        .js-project { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; }
+    </style>
 </head>
 <body>
 
@@ -11,9 +17,22 @@
         <div class="js-project-list"></div>
     </div>
 
-    <!-- BEGIN templates zone -->
+    <template id="tpl-project">
+        <div class="js-project" data-id="" data-tags="" data-search="" data-archived="">
+            <h2><span class="js-name"></span> (<span class="js-progress"></span>%)</h2>
+            <p class="js-excerpt"></p>
+            <div>
+                <span class="js-category"></span>
+                <span class="js-tags"></span>
+            </div>
+        </div>
+    </template>
 
-    <!-- END templates zone -->
+    <template id="tpl-tag">
+        <span class="js-tag">
+            <a class="js-tag-link" data-tag="" href=""></a>
+        </span>
+    </template>
 
     <script src="u1e2.js"></script>
 
